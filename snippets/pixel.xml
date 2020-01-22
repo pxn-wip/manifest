@@ -6,6 +6,10 @@
           revision="ten"
           review="gerrit.pixelexperience.org" />
 
+  <remote name="pixen"
+          fetch="https://github.com/wippxn"
+          revision="10pe" />
+
   <remote name="pixel-devices"
           fetch="https://github.com/PixelExperience-Devices"
           revision="ten" />
@@ -33,17 +37,17 @@
   <project path="vendor/qcom/opensource/dataservices" name="vendor_qcom_opensource_dataservices" remote="pixel" />
 
   <!-- Framework repos -->
-  <project path="frameworks/av" name="frameworks_av" remote="pixel" />
-  <project path="frameworks/base" name="frameworks_base" remote="pixel" />
+  <project path="frameworks/av" name="frameworks_av" remote="pixen" />
+  <project path="frameworks/base" name="frameworks_base" remote="pixen" />
   <project path="frameworks/native" name="frameworks_native" remote="pixel" />
-  <project path="frameworks/opt/net/ims" name="frameworks_opt_net_ims" remote="pixel" />
+  <project path="frameworks/opt/net/ims" name="frameworks_opt_net_ims" remote="pixen" />
   <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" remote="pixel" />
-  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="pixel" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="pixen" />
 
   <!-- General repos -->
-  <project path="art" name="art" remote="pixel" />
+  <project path="art" name="art" remote="pixen" />
   <project path="bionic" name="bionic" remote="pixel" />
-  <project path="build/make" name="build" remote="pixel">
+  <project path="build/make" name="build_make" remote="pixen">
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -52,23 +56,25 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/soong" name="build_soong" remote="pixel" >
+  <project path="build/soong" name="build_soong" remote="pixen" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
   <project path="build/blueprint" name="build_blueprint" remote="pixel" />
   <project path="bootable/recovery" name="bootable_recovery" remote="pixel" />
   <project path="development" name="development" remote="pixel" />
-  <project path="device/custom/sepolicy" name="device_custom_sepolicy" remote="pixel" />
-  <project path="manifest" name="manifest" remote="pixel" />
+  <project path="device/custom/sepolicy" name="device_custom_sepolicy" remote="pixen" />
+  <project path="manifest" name="manifest" remote="pixen" />
   <project path="platform_testing" name="platform_testing" remote="pixel" />
-  <project path="vendor/aosp" name="vendor_aosp" remote="pixel" />
+  <project path="vendor/aosp" name="vendor_aosp" remote="pixen" />
   <project path="vendor/gapps" name="vendor_gapps" remote="pixel-gitlab" clone-depth="1" />
   <project path="vendor/pixelstyle" name="vendor_pixelstyle" remote="pixel" />
   <project path="vendor/google/customization" name="vendor_google_customization" remote="pixel" />
+  <project path="packages/apps/PixelLiveWallpaper" name="packages_apps_PixelLiveWallpaper" remote="pixel-gitlab" clone-depth="1" />
 
   <!-- Hardware repos -->
-  <project path="hardware/custom/interfaces" name="hardware_custom_interfaces" remote="pixel" />
+  <project path="hardware/custom/interfaces" name="hardware_custom_interfaces" remote="pixen" />
+  <project path="vendor/interfaces" name="vendor_interfaces" remote="pixen" />
   <project path="hardware/interfaces" name="hardware_interfaces" remote="pixel" />
   <project path="hardware/libhardware" name="hardware_libhardware" remote="pixel" />
   <project path="hardware/libhardware_legacy" name="hardware_libhardware_legacy" remote="pixel" />
@@ -88,15 +94,16 @@
   <project path="packages/apps/Camera2" name="packages_apps_Camera2" remote="pixel" />
   <project path="packages/apps/FMRadio" name="packages_apps_FMRadio" remote="pixel" />
   <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="pixel" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="pixel" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="pixen" />
+  <project path="packages/apps/NitrogenSettings" name="packages_apps_NitrogenSettings" remote="pixen" />
   <project path="packages/apps/Snap" name="packages_apps_Snap" remote="pixel" />
   <project path="packages/apps/Traceur" name="packages_apps_Traceur" remote="pixel" />
   <project path="packages/apps/Updates" name="packages_apps_Updates" remote="pixel" />
   <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="pixel" />
   <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" remote="pixel" />
   <project path="packages/services/BuiltInPrintService" name="packages_services_BuiltInPrintService" remote="pixel" />
-  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="pixel" />
-  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="pixel" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="pixen" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="pixen" />
 
   <!-- External repos -->
   <project path="external/tinycompress" name="external_tinycompress" remote="pixel" />
@@ -105,7 +112,7 @@
   <project path="system/apex" name="system_apex" remote="pixel" />
   <project path="system/bt" name="system_bt" remote="pixel" />
   <project path="system/extras" name="system_extras" remote="pixel" />
-  <project path="system/core" name="system_core" remote="pixel" />
+  <project path="system/core" name="system_core" remote="pixen" />
   <project path="system/hardware/interfaces" name="system_hardware_interfaces" remote="pixel" />
   <project path="system/keymaster" name="system_keymaster" remote="pixel" />
   <project path="system/netd" name="system_netd" remote="pixel" />
