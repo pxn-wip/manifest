@@ -119,4 +119,11 @@
   <project path="system/sepolicy" name="system_sepolicy" remote="pixel" />
   <project path="system/vold" name="system_vold" remote="pixel" />
 
+  <!-- Device Repos --> 
+  <project path="device/oneplus/enchilada" name="device_oneplus_enchilada" remote="pixen" />
+  <project path="device/oneplus/fajita" name="device_oneplus_fajita" remote="pixen" />
+  <project path="device/oneplus/sdm845-common" name="device_oneplus_sdm845-common" remote="pixen" />
+  <project path="vendor/oneplus" name="proprietary_vendor_oneplus" remote="pixen" /> 
+  <project path="kernel/oneplus/sdm845" name="kernel_oneplus_sdm845" remote="pixen" />
+
 </manifest>
